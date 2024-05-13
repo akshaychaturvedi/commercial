@@ -1,0 +1,33 @@
+###
+http://localhost:4004/odata/v4/product/ProductList
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+
+###
+http://localhost:4004/odata/v4/product/ProductList(ID=223e4567-e89b-12d3-a456-426614174001)
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+
+
+###
+http://localhost:4004/odata/v4/product/ProductList(ID=223e4567-e89b-12d3-a456-426614174001)?$expand=metrices
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+
+###
+POST http://localhost:4004/odata/v4/product/ProductList
+Content-Type: application/json
+
+{
+    "productName": "Product A",
+    "productOwner": "Owner A",
+    "metrices": [
+        {      
+        "name": "API Calls",
+        "isChecked": true, 
+        "product_ID": "223e4567-e89b-12d3-a456-426614174001"     
+        }
+    ]
+}
+
+###
+http://localhost:4004/odata/v4/product/ProductList(ID=d410bb18-8630-4710-bd4b-b6f130309776)?$expand=metrices
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+

@@ -1,0 +1,71 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="commercialui.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.f"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+    <Page title="Main">
+
+    </Page>
+</mvc:View>    
+<!-- <f:DynamicPage id="mainPage" headerExpanded="true" toggleHeaderOnTitleClick="true">
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle id="pageTitle">
+                <f:heading>
+                    <Title id="headerTitle" text="{i18n>title}"></Title>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <!-- DynamicPage Header -->
+        <f:header>
+            <f:DynamicPageHeader id="pageHeader">
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <!-- DynamicPage Content -->
+        <f:content>
+        
+            <VBox fitContainer="true">
+                <VBox >
+                    <form:SimpleForm id="productForm" editable="true" layout="ResponsiveGridLayout" title="Product Details">
+                        <Label text="Product Name" required="true"/>
+                        <Input value="{productName}" placeholder="Enter product name"/>
+                        <Label text="Product Owner" required="true"/>
+                        <Input value="{productOwner}" placeholder="Enter product owner"/>
+                    </form:SimpleForm>
+                </VBox>
+                <VBox >
+                    <Table id="metricTable" items="{/MetricsList}">
+                        <columns>
+                            <Column>
+                                <Text text="Metric Name"/>
+                            </Column>
+                            <Column>
+                                <Text text="Selection"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{name}"/>
+                                    <CheckBox selected="{isChecked}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+            </VBox>
+
+
+        </f:content>
+
+        <!-- DynamicPage Footer -->
+        <f:footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button id="saveButton" type="Emphasized" text="{i18n>saveButton}" press="onSave"/>
+            </OverflowToolbar>
+        </f:footer>
+
+    </f:DynamicPage> -->

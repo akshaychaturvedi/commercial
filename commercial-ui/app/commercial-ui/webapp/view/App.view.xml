@@ -1,0 +1,83 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="commercialui.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.f"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+
+    <App id="app">
+        <Page title="Commercial UI" class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer">
+
+            <content>
+                <VBox class="sapUiLargeMarginBottom">
+                    <form:SimpleForm id="productForm" editable="true" layout="ResponsiveGridLayout" title="Product Details">
+                        <Label text="Product Name" required="true"/>
+                        <Input value="{ProductModel>/productName}" placeholder="Enter product name" width="50%"/>
+                        <Label text="Product Owner" required="true"/>
+                        <Input value="{ProductModel>/productOwner}" placeholder="Enter product owner" width="50%"/>
+                    </form:SimpleForm>
+                </VBox>
+                <VBox class="sapUiLargeMarginBottom">
+                    <Table id="metricTable" items="{MetricsModel>/metrics}">
+                        <columns>
+                            <Column>
+                                <Text text="Metrics"/>
+                            </Column>
+                            <Column>
+                                <Text text="Selection"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{MetricsModel>name}"/>
+                                    <CheckBox selected="{MetricsModel>isChecked}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+            </content>
+
+            <footer>
+                <OverflowToolbar >
+                    <ToolbarSpacer/>
+                    <Button id="saveButton" type="Emphasized" text="{i18n>saveButton}" press="onSave"/>
+                </OverflowToolbar>
+            </footer>
+        </Page>
+    </App>
+
+    <!-- <l:VerticalLayout width="100%">
+        <Title level="H1" titleStyle="H1" text="{i18n>title}" class="sapUiMediumMarginTopBottom sapUiSmallMarginBegin"/>
+        <l:Grid containerQuery="false" position="Left" width="100%" defaultIndent='XL5 L5 M5 S5'>
+            <form:SimpleForm id="productForm" editable="true" layout="ResponsiveGridLayout" title="Product Details" width="auto">
+                <Label text="Product Name" required="true"/>
+                <Input value="{productName}" placeholder="Enter product name"/>
+                <Label text="Product Owner" required="true"/>
+                <Input value="{productOwner}" placeholder="Enter product owner"/>
+            </form:SimpleForm>
+            <Table id="metricTable" class="sapFDynamicPageAlignContent" items="{/MetricsList}" width="80%">
+                        <columns>
+                            <Column>
+                                <Text text="Metric Name"/>
+                            </Column>
+                            <Column>
+                                <Text text="Selection"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{name}"/>
+                                    <CheckBox selected="{isChecked}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+        </l:Grid>
+
+
+    </l:VerticalLayout> -->
+
+
+</mvc:View>
