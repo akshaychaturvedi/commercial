@@ -31,3 +31,6 @@ Content-Type: application/json
 http://localhost:4004/odata/v4/product/ProductList(ID=d410bb18-8630-4710-bd4b-b6f130309776)?$expand=metrices
 Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
 
+###
+http://localhost:4004/odata/v4/product/ProductMetricesList?$filter=isChecked eq true
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true

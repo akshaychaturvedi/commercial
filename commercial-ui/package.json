@@ -22,7 +22,8 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-commercial-ui": "cds watch --open commercial-ui/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-commercial-ui": "cds watch --open commercial-ui/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-addon-ui": "cds watch --open addon-ui/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
