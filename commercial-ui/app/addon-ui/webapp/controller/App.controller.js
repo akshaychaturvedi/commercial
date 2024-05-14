@@ -58,12 +58,13 @@ sap.ui.define(
           var oBusyDialog = new sap.m.BusyDialog();
           oBusyDialog.open();
 
-          // sap.ui.core.BusyIndicator.show()
-
           var oTable = this.getView().byId("metricTable");
           await this.filterTable(oTable, sProductKey);
           oTable.setVisible(true);
 
+          var oCodeArea = this.getView().byId('codeArea');
+          oCodeArea.setVisible(true);
+          
           oBusyDialog.close();
         }
       }

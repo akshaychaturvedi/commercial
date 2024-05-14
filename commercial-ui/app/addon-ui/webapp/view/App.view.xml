@@ -19,7 +19,8 @@
                         emptySpanS="0"
                         labelSpanXL="6"
                         columnsXL="1">
-                        <Label text="Product Name" required="true"></Label>
+                        <Label text="Product Name"
+                            required="true"></Label>
                         <ComboBox id="productBox"
                             items="{
 					path: '/ProductList',
@@ -30,7 +31,8 @@
                             <core:Item key="{ID}"
                                 text="{productName}" />
                         </ComboBox>
-                        <Label text="Language" required="true"></Label>
+                        <Label text="Language"
+                            required="true"></Label>
                         <ComboBox id="languageBox"
                             width="40%"
                             selectionChange="onLaguageSelect">
@@ -64,11 +66,19 @@
                             <ColumnListItem>
                                 <cells>
                                     <Text text="{name}"/>
-                                    <CheckBox selected="{isChecked}" editable="false"/>
+                                    <CheckBox selected="{isChecked}"
+                                        editable="false"/>
                                 </cells>
                             </ColumnListItem>
                         </items>
                     </Table>
+                </VBox>
+                <VBox class="sapUiLargeMarginBottom">
+                    <TextArea id="codeArea"
+                        visible="false"
+                        value="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                        growing="true"
+                        width="100%"/>
                 </VBox>
             </content>
         </Page>
