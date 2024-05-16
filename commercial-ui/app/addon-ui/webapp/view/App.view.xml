@@ -1,4 +1,5 @@
-<mvc:View xmlns:form="sap.ui.layout.form"
+<mvc:View xmlns:codeeditor="sap.ui.codeeditor"
+    xmlns:form="sap.ui.layout.form"
     controllerName="addonui.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -74,11 +75,16 @@
                     </Table>
                 </VBox>
                 <VBox class="sapUiLargeMarginBottom">
-                    <TextArea id="codeArea"
+                    <codeeditor:CodeEditor id="codeArea"
                         visible="false"
-                        value="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-                        growing="true"
-                        width="100%"/>
+                        height="300px"
+                        editable="false"
+                        maxLines="10"
+                        value="var value1 = 10;
+                        var value2 = 20;
+                        var sum = value1 + value2
+                        console.log(sum)"
+                        type="javascript" />
                 </VBox>
             </content>
         </Page>
